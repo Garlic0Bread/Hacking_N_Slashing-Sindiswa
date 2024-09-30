@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dffbde5edf20a94b88b5a5d4243c382, type: 3}
+  m_Name: Wood Staff
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 0}
+  itemName: Earthly Staff
+  modelPrefab: {fileID: 8640539037370921073, guid: 9c01f69dabc980742be73d4cc6735d80,
+    type: 3}
+  isUnarmed: 0
+  OneHand_LightAttack_1: 
+  OneHand_HeavyAttack_1: 
