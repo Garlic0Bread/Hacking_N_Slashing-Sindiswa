@@ -5,7 +5,10 @@ using System.Collections.Generic;
 // Contains basic setup and common functions used by all the player behaviours.
 public class BasicBehaviour : MonoBehaviour
 {
-	public Transform playerCamera;                        // Reference to the camera that focus the player.
+    [SerializeField] private GameObject LEFT_running_VFX;
+    [SerializeField] private GameObject RIGHT_running_VFX;
+
+    public Transform playerCamera;                        // Reference to the camera that focus the player.
 	public float turnSmoothing = 0.06f;                   // Speed of turn when moving to match camera facing.
 	public float sprintFOV = 100f;                        // the FOV to use on the camera when player is sprinting.
 	public string sprintButton = "Sprint";                // Default sprint button input name.
@@ -85,10 +88,13 @@ public class BasicBehaviour : MonoBehaviour
 		{
 			changedFOV = true;
 			camScript.SetFOV(sprintFOV);
-		}
-		else if(changedFOV)
+            LEFT_running_VFX.SetActive(true);
+
+        }
+        else if(changedFOV)
 		{
-			camScript.ResetFOV();
+            LEFT_running_VFX.SetActive(false);
+            camScript.ResetFOV();
 			changedFOV = false;
 		}
 		// Set the grounded test on the Animator Controller.

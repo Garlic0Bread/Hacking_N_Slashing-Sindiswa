@@ -10,17 +10,6 @@ public class Player_Attacker : GenericBehaviour
     private Animator anim;
     private int hasAttackCounter = Animator.StringToHash("AttackCounter");
 
-
-    public void Handle_LightAttack(WeaponItem weapon)
-    { 
-
-    }
-
-    public void Handle_HeavyAttack(WeaponItem weapon)
-    {
-
-    }
-
     private void Awake()
     {
         if (instance == null)
@@ -39,6 +28,10 @@ public class Player_Attacker : GenericBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
+        }
+        else if(Input.GetKeyDown(KeyCode.K))
+        {
+            anim.SetTrigger("Skill_01");
         }
     }
 
